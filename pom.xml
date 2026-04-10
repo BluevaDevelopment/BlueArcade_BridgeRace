@@ -7,7 +7,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>bridge-race-minecraft</module>
-        <module>bridge-race-hytale</module>
     </modules>
     <properties>
         <revision>dev</revision>

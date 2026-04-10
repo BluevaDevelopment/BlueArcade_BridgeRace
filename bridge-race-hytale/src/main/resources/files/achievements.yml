@@ -1,0 +1,309 @@
+# Bridge Race Module - Achievements
+
+file_version: 1
+
+achievements:
+  bridge_builder:
+    name: "Bridge Builder"
+    icon: "BRICKS"
+    phases:
+      1:
+        name: "First Steps"
+        description: "Play your first Bridge Race"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 1
+        rewards:
+          - "baa credits --action=give --player={player} --amount=50"
+          - "baa xp --action=give --player={player} --amount=25"
+      2:
+        name: "Regular Builder"
+        description: "Play 10 Bridge Races"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 10
+        rewards:
+          - "baa credits --action=give --player={player} --amount=100"
+          - "baa xp --action=give --player={player} --amount=50"
+      3:
+        name: "Bridge Veteran"
+        description: "Play 25 Bridge Races"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 25
+        rewards:
+          - "baa credits --action=give --player={player} --amount=200"
+          - "baa xp --action=give --player={player} --amount=100"
+      4:
+        name: "Bridge Expert"
+        description: "Play 50 Bridge Races"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 50
+        rewards:
+          - "baa credits --action=give --player={player} --amount=400"
+          - "baa xp --action=give --player={player} --amount=200"
+      5:
+        name: "Bridge Master"
+        description: "Play 100 Bridge Races"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 100
+        rewards:
+          - "baa credits --action=give --player={player} --amount=800"
+          - "baa xp --action=give --player={player} --amount=400"
+
+  master_bridger:
+    name: "Master Bridger"
+    icon: "BRICK"
+    phases:
+      1:
+        name: "First Blocks"
+        description: "Place 50 blocks in Bridge Race"
+        triggers:
+          - type: "stat"
+            stat: "blocks_placed"
+            threshold: 50
+        rewards:
+          - "baa credits --action=give --player={player} --amount=50"
+          - "baa xp --action=give --player={player} --amount=25"
+      2:
+        name: "Steady Hands"
+        description: "Place 200 blocks in Bridge Race"
+        triggers:
+          - type: "stat"
+            stat: "blocks_placed"
+            threshold: 200
+        rewards:
+          - "baa credits --action=give --player={player} --amount=100"
+          - "baa xp --action=give --player={player} --amount=50"
+      3:
+        name: "Bridge Architect"
+        description: "Place 500 blocks in Bridge Race"
+        triggers:
+          - type: "stat"
+            stat: "blocks_placed"
+            threshold: 500
+        rewards:
+          - "baa credits --action=give --player={player} --amount=200"
+          - "baa xp --action=give --player={player} --amount=100"
+      4:
+        name: "Master Constructor"
+        description: "Place 1000 blocks in Bridge Race"
+        triggers:
+          - type: "stat"
+            stat: "blocks_placed"
+            threshold: 1000
+        rewards:
+          - "baa credits --action=give --player={player} --amount=400"
+          - "baa xp --action=give --player={player} --amount=200"
+      5:
+        name: "Legendary Builder"
+        description: "Place 2000 blocks in Bridge Race"
+        triggers:
+          - type: "stat"
+            stat: "blocks_placed"
+            threshold: 2000
+        rewards:
+          - "baa credits --action=give --player={player} --amount=800"
+          - "baa xp --action=give --player={player} --amount=400"
+
+  bridge_champion:
+    name: "Bridge Champion"
+    icon: "DIAMOND"
+    phases:
+      1:
+        name: "First Victory"
+        description: "Win your first Bridge Race"
+        triggers:
+          - type: "stat"
+            stat: "wins"
+            threshold: 1
+        rewards:
+          - "baa credits --action=give --player={player} --amount=75"
+          - "baa xp --action=give --player={player} --amount=40"
+      2:
+        name: "Bridge Winner"
+        description: "Win 5 Bridge Races"
+        triggers:
+          - type: "stat"
+            stat: "wins"
+            threshold: 5
+        rewards:
+          - "baa credits --action=give --player={player} --amount=150"
+          - "baa xp --action=give --player={player} --amount=75"
+      3:
+        name: "Bridge Ruler"
+        description: "Win 12 Bridge Races"
+        triggers:
+          - type: "stat"
+            stat: "wins"
+            threshold: 12
+        rewards:
+          - "baa credits --action=give --player={player} --amount=300"
+          - "baa xp --action=give --player={player} --amount=150"
+      4:
+        name: "Bridge Monarch"
+        description: "Win 25 Bridge Races"
+        triggers:
+          - type: "stat"
+            stat: "wins"
+            threshold: 25
+        rewards:
+          - "baa credits --action=give --player={player} --amount=600"
+          - "baa xp --action=give --player={player} --amount=300"
+      5:
+        name: "Bridge Sovereign"
+        description: "Win 45 Bridge Races"
+        triggers:
+          - type: "stat"
+            stat: "wins"
+            threshold: 45
+        rewards:
+          - "baa credits --action=give --player={player} --amount=1200"
+          - "baa xp --action=give --player={player} --amount=600"
+
+  speed_builder:
+    name: "Speed Builder"
+    icon: "GOLDEN_PICKAXE"
+    phases:
+      1:
+        name: "Quick Start"
+        description: "Play 15 Bridge Races and place 120 blocks"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 15
+          - type: "stat"
+            stat: "blocks_placed"
+            threshold: 120
+        rewards:
+          - "baa credits --action=give --player={player} --amount=100"
+          - "baa xp --action=give --player={player} --amount=50"
+      2:
+        name: "Fast Builder"
+        description: "Play 40 Bridge Races and place 300 blocks"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 40
+          - type: "stat"
+            stat: "blocks_placed"
+            threshold: 300
+        rewards:
+          - "baa credits --action=give --player={player} --amount=200"
+          - "baa xp --action=give --player={player} --amount=100"
+      3:
+        name: "Rapid Constructor"
+        description: "Play 70 Bridge Races and place 600 blocks"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 70
+          - type: "stat"
+            stat: "blocks_placed"
+            threshold: 600
+        rewards:
+          - "baa credits --action=give --player={player} --amount=400"
+          - "baa xp --action=give --player={player} --amount=200"
+      4:
+        name: "Turbo Builder"
+        description: "Play 100 Bridge Races and place 900 blocks"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 100
+          - type: "stat"
+            stat: "blocks_placed"
+            threshold: 900
+        rewards:
+          - "baa credits --action=give --player={player} --amount=800"
+          - "baa xp --action=give --player={player} --amount=400"
+      5:
+        name: "Lightning Builder"
+        description: "Play 140 Bridge Races and place 1300 blocks"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 140
+          - type: "stat"
+            stat: "blocks_placed"
+            threshold: 1300
+        rewards:
+          - "baa credits --action=give --player={player} --amount=1600"
+          - "baa xp --action=give --player={player} --amount=800"
+
+  bridge_legend:
+    name: "Bridge Legend"
+    icon: "NETHER_STAR"
+    phases:
+      1:
+        name: "Rising Star"
+        description: "Play 20 Bridge Races and win 3"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 20
+          - type: "stat"
+            stat: "wins"
+            threshold: 3
+        rewards:
+          - "baa credits --action=give --player={player} --amount=100"
+          - "baa xp --action=give --player={player} --amount=50"
+      2:
+        name: "Bridge Hero"
+        description: "Play 50 Bridge Races and win 10"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 50
+          - type: "stat"
+            stat: "wins"
+            threshold: 10
+        rewards:
+          - "baa credits --action=give --player={player} --amount=200"
+          - "baa xp --action=give --player={player} --amount=100"
+      3:
+        name: "Bridge Ace"
+        description: "Play 80 Bridge Races and win 20"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 80
+          - type: "stat"
+            stat: "wins"
+            threshold: 20
+        rewards:
+          - "baa credits --action=give --player={player} --amount=400"
+          - "baa xp --action=give --player={player} --amount=200"
+      4:
+        name: "Bridge Elite"
+        description: "Play 120 Bridge Races and win 35"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 120
+          - type: "stat"
+            stat: "wins"
+            threshold: 35
+        rewards:
+          - "baa credits --action=give --player={player} --amount=800"
+          - "baa xp --action=give --player={player} --amount=400"
+      5:
+        name: "Bridge Immortal"
+        description: "Play 180 Bridge Races and win 55"
+        triggers:
+          - type: "stat"
+            stat: "games_played"
+            threshold: 180
+          - type: "stat"
+            stat: "wins"
+            threshold: 55
+        rewards:
+          - "baa credits --action=give --player={player} --amount=1600"
+          - "baa xp --action=give --player={player} --amount=800"

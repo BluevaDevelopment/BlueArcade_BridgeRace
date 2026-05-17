@@ -18,6 +18,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -31,6 +32,21 @@ public class BridgeRaceListener implements Listener {
         this.gameManager = gameManager;
         this.stateRegistry = stateRegistry;
         this.statsService = statsService;
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
+    public void onFallDamage(EntityDamageEvent event) {
+        if (event.getCause() != EntityDamageEvent.DamageCause.FALL || !(event.getEntity() instanceof Player player)) {
+            return;
+        }
+
+        GameContext<Player, Location, World, Material, ItemStack, Sound, Block, Entity> context =
+                gameManager.getGameContext(player);
+        if (context == null || !context.isPlayerPlaying(player)) {
+            return;
+        }
+
+        event.setCancelled(true);
     }
 
     @EventHandler

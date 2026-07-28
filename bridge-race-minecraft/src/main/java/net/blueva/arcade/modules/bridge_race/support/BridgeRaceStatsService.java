@@ -47,7 +47,6 @@ public class BridgeRaceStatsService {
         }
 
         statsAPI.addModuleStat(player, moduleInfo.getId(), "wins", 1);
-        statsAPI.addGlobalStat(player, "wins", 1);
     }
 
     public void recordGamePlayed(Collection<Player> players) {
